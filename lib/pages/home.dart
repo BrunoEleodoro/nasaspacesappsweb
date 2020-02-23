@@ -6,6 +6,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  var selectedItem = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,12 +14,26 @@ class _HomePageState extends State<HomePage> {
       children: <Widget>[
         Container(
           decoration: BoxDecoration(
-            color: Color(0XFF303030),
+            color: Colors.grey[800],
           ),
           width: 300,
           height: MediaQuery.of(context).size.height,
           child: Column(
-            children: <Widget>[],
+            children: <Widget>[
+              SizedBox(
+                height: 200,
+              ),
+              ListTile(
+                onTap: () {},
+                leading: Icon(Icons.home),
+                title: Text('Home'),
+              ),
+              ListTile(
+                onTap: () {},
+                leading: Icon(Icons.question_answer),
+                title: Text('Desafios'),
+              ),
+            ],
           ),
         )
       ],
